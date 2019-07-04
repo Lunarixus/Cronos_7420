@@ -4379,7 +4379,6 @@ windows_config:
 	if (decon->out_type == DECON_OUT_DSI && decon->mdnie->need_update)
 		decon_mdnie_frame_update(decon->mdnie, decon->lcd_info->xres, decon->lcd_info->yres);
 #endif
-
 	for (i = 0; i < decon->pdata->max_win && !ret; i++) {
 		struct decon_win_config *config = &win_config[i];
 		struct decon_win *win = decon->windows[i];
