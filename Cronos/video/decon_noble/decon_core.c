@@ -57,9 +57,6 @@
 #include "../../../staging/android/sw_sync.h"
 #include "vpp/vpp_core.h"
 
-#ifdef CONFIG_CPU_BOOST
-#include <linux/cpu_input_boost.h>
-#endif
 #ifdef CONFIG_DEVFREQ_BOOST
 #include <linux/devfreq_boost.h>
 #endif
@@ -4387,7 +4384,6 @@ windows_config:
 #ifdef CONFIG_DEVFREQ_BOOST
 	devfreq_boost_kick(DEVFREQ_EXYNOS_MIF);
 #endif
-
 	for (i = 0; i < decon->pdata->max_win && !ret; i++) {
 		struct decon_win_config *config = &win_config[i];
 		struct decon_win *win = decon->windows[i];
