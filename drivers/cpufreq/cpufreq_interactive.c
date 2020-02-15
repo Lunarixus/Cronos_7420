@@ -99,7 +99,6 @@ struct cpufreq_loadinfo {
 	unsigned int freq;
 	u64 timestamp;
 };
-static bool hmp_boost;
 
 #define MULTI_MODE  2
 #define SINGLE_MODE 1
