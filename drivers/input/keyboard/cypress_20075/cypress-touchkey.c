@@ -2735,7 +2735,7 @@ static int __init touchkey_init(void)
 #endif
 #ifndef CONFIG_DONT_UNIFY_ME_PLS
 	if (variant_edge == IS_EDGE) {
-		return;
+		return 0;
 	}
 #endif
 	i2c_add_driver(&touchkey_i2c_driver);
