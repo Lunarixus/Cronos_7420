@@ -226,8 +226,8 @@ return min + load * (max - min) / 100;
 static u64 update_load(int cpu)
 {
 struct cpufreq_interactive_cpuinfo *pcpu = &per_cpu(cpuinfo, cpu);
-u64 now;
-u64 now_idle;
+u64 now = 0;
+u64 now_idle = 0;
 unsigned int delta_idle;
 unsigned int delta_time;
 u64 active_time;
